@@ -1,7 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import {
+  Menu,
+  CarouselColection,
+  ItemList,
+  SideFilters,
+} from "../components/base";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 ---
 
 <Layout>
-  <div>New Proyect</div>
+  <div class="px-10 h-screen">
+    <Menu client:visible />
+    <div class="border-black border-2"></div>
+    <CarouselColection client:visible />
+    <div class="flex">
+      <SideFilters client:visible />
+      <ItemList client:visible />
+    </div>
+  </div>
 </Layout>
